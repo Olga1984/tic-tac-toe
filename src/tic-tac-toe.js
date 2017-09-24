@@ -18,11 +18,16 @@ class TicTacToe {
 
     isFinished() {
 //should return return true or false
+        if (this.getWinner() !== null || this.noMoreTurns() === true){
+            return true;
+        }else{
+            return false;
+        }    
     }
 
     getWinner() {
 //should return winner of the game or null
-        if (this.winner == null){
+        if (this.winner === null){
             return null;
         }else{
             return this.winner;
@@ -31,12 +36,12 @@ class TicTacToe {
 
     noMoreTurns() {
 //should return true if game field is full and false otherwise
-        return (this.move == 9)?true:false;
+        return (this.move === 9)?true:false;
     }
 
     isDraw() {
 //should return false if game is not finished or there is a winner, and true if it is a draw
-        if(this.getWinner() == null && this.noMoreTurns() ==true){
+        if(this.getWinner() === null && this.noMoreTurns() === true){
             return true;
         }else {
             return false;
