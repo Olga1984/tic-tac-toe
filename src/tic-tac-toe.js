@@ -13,6 +13,7 @@ class TicTacToe {
 
     nextTurn(rowIndex, columnIndex) {
 //should update game state correctly
+        
     }
 
     isFinished() {
@@ -21,6 +22,11 @@ class TicTacToe {
 
     getWinner() {
 //should return winner of the game or null
+        if (this.winner == null){
+            return null;
+        }else{
+            return this.winner;
+        }        
     }
 
     noMoreTurns() {
@@ -33,6 +39,7 @@ class TicTacToe {
 
     getFieldValue(rowIndex, colIndex) {
 //should return correct field value
+        return this.field[rowIndex][colIndex];
     }
 }
 
