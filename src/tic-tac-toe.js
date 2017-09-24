@@ -33,7 +33,7 @@ class TicTacToe {
 
     isFinished() {
 //should return return true or false
-        if (this.getWinner() != null || this.noMoreTurns() == true){
+        if (this.getWinner() != null || this.noMoreTurns() == true || this.isDraw()== true){
             return true;
         }else{
             return false;
