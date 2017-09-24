@@ -31,10 +31,16 @@ class TicTacToe {
 
     noMoreTurns() {
 //should return true if game field is full and false otherwise
+        return (this.move == 9)?true:false;
     }
 
     isDraw() {
 //should return false if game is not finished or there is a winner, and true if it is a draw
+        if(this.getWinner() == null && this.noMoreTurns() ==true){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     getFieldValue(rowIndex, colIndex) {
